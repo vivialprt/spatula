@@ -80,3 +80,32 @@ class Solution:
                 end_to_start[num] = num
 
         return maxlen
+
+    def longestConsecutive2(self, nums: List[int]) -> int:
+        """
+        Solution with presorting. First, duplicates
+        are bieng removed from nums, then nums are sorted.
+        Nums are iterated and if two nums are consecutive,
+        temporary consequtives counter is incremented, else
+        counter is reset and checked if it is bigger than
+        current max length. The check is also performed
+        after loop, because the counter might not be reset.
+        Complexity is O(nlogn) for sorting and O(n) for loop.
+        """
+        # small heuristic can give boost for some test cases
+        if len(nums) < 2:
+            return len(nums)
+        temp = 1
+        maxlen = 1
+        nums = sorted(set(nums))
+        for i in range(1, len(nums)):
+            if nums[i - 1] + 1 == nums[i]:
+                temp += 1
+            else:
+                if temp > maxlen:
+                    maxlen = temp
+                temp = 1
+        if maxlen > temp:
+            return maxlen
+        else:
+            return temp
