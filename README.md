@@ -1,2 +1,2 @@
-# spatula
-Repo for leetcode solutions
+# Leetcode solutions
+## List of solved problems
