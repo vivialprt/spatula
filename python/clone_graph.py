@@ -56,10 +56,58 @@ class Solution:
         import copy
         return copy.deepcopy(node)
 
+    def cloneGraph2(self, node: Optional['Node']) -> Optional['Node']:
+        """
+        Depth-first traversing and hashmap utilization.
+        """
+        # Small heuristics can give boost for some test cases
+        if node is None:
+            return None
+
+        if len(node.neighbors) == 0:
+            return Node(node.val)
+
+        # Stack for DFS traversing
+        stack = deque()
+        stack.append(node)
+
+        # Hashmap for cloned nodes to avoid rebuilding the same nodes
+        cloned = {}
+
+        # Set of seen nodes,
+        # so already seen nodes are not being pushed to stack.
+        # We cannot use cloned hashmap for this,
+        # because if node is cloned it does not mean it's been seen
+        seen = {node}
+
+        while stack:
+            current_node = stack.pop()
+
+            # If node is not cloned yet, we only recreate value,
+            # without neighbors
+            if current_node.val not in cloned:
+                cloned[current_node.val] = Node(current_node.val)
+
+            for neighbor in current_node.neighbors:
+                # Neighbor has not been seen
+                # add him to stack and mark as seen
+                if neighbor not in seen:
+                    stack.append(neighbor)
+                    seen.add(neighbor)
+
+                # Ensure the neighbor is cloned
+                if neighbor.val not in cloned:
+                    cloned[neighbor.val] = Node(neighbor.val)
+
+                # Add the neighbor to the list of current node neighbors
+                cloned[current_node.val].neighbors.append(cloned[neighbor.val])
+
+        return cloned[1]
+
 
 if __name__ == "__main__":
     solution = Solution()
     graph = solution.createGraph([[2, 4], [1, 3], [2, 4], [1, 3]])
     solution.printGraph(graph)
-    clone = solution.cloneGraph(graph)
+    clone = solution.cloneGraph2(graph)
     solution.printGraph(clone)
