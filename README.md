@@ -6,3 +6,5 @@ __[python](python/longest_consecutive_sequence.py)__
 __[python](python/clone_graph.py)__
 - [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)  
 __[python](python/palindromic_substrings.py)__
+- [139. Word Break](https://leetcode.com/problems/word-break)  
+__[python](python/word_break.py)__
