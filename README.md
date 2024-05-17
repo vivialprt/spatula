@@ -8,3 +8,5 @@ __[python](python/clone_graph.py)__
 __[python](python/palindromic_substrings.py)__
 - [139. Word Break](https://leetcode.com/problems/word-break)  
 __[python](python/word_break.py)__
+- [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)  
+__[python](python/linked_list_cycle.py)__
