@@ -10,3 +10,5 @@ __[python](python/palindromic_substrings.py)__
 __[python](python/word_break.py)__
 - [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)  
 __[python](python/linked_list_cycle.py)__
+- [268. Missing Number](https://leetcode.com/problems/missing-number/)  
+__[python](python/missing_number.py)__
