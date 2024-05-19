@@ -12,3 +12,5 @@ __[python](python/word_break.py)__
 __[python](python/linked_list_cycle.py)__
 - [268. Missing Number](https://leetcode.com/problems/missing-number/)  
 __[python](python/missing_number.py)__
+- [143. Reorder List](https://leetcode.com/problems/reorder-list/)  
+__[python](python/reorder_list.py)__
