@@ -14,3 +14,5 @@ __[python](python/linked_list_cycle.py)__
 __[python](python/missing_number.py)__
 - [143. Reorder List](https://leetcode.com/problems/reorder-list/)  
 __[python](python/reorder_list.py)__
+- [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)  
+__[python](python/merge_two_sorted_lists.py)__
