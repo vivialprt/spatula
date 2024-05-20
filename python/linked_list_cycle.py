@@ -1,5 +1,5 @@
 """
-Solutions for Clone Graph problem
+Solutions for Linked List Cycle problem
 https://leetcode.com/problems/linked-list-cycle
 """
 from typing import Optional

@@ -1,3 +1,7 @@
+"""
+Solutions for Word Break problem
+https://leetcode.com/problems/word-break
+"""
 from collections import deque
 from typing import List
 
