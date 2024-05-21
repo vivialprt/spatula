@@ -16,3 +16,5 @@ __[python](python/missing_number.py)__
 __[python](python/reorder_list.py)__
 - [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)  
 __[python](python/merge_two_sorted_lists.py)__
+- [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)  
+__[python](python/merge_k_sorted_lists.py)__
