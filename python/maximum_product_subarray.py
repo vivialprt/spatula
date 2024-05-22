@@ -47,3 +47,23 @@ class Solution:
                     result = new_product
 
         return result
+
+    def maxProduct2(self, nums: List[int]) -> int:
+        """
+        Solution with single traverse (O(n)).
+        Products are accumulated if they are getting bigger
+        and dropped and started over otherwise.
+        Smallest values are also being accumulated
+        for a case of sign switch for negative numbers.
+        """
+        current_max = current_min = 1
+        result = nums[0]
+        for num in nums:
+            min_candidate = num * current_max
+            max_candidate = num * current_min
+            current_max = max(num, min_candidate, max_candidate)
+            current_min = min(num, min_candidate, max_candidate)
+
+            result = max(result, current_max)
+
+        return result
