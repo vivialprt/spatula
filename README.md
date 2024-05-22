@@ -18,3 +18,5 @@ __[python](python/reorder_list.py)__
 __[python](python/merge_two_sorted_lists.py)__
 - [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)  
 __[python](python/merge_k_sorted_lists.py)__
+- [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray)  
+__[python](python/maximum_product_subarray.py)__
